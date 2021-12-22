@@ -1,0 +1,112 @@
+
+<!-- *ngIf="page.isPageLoaded" -->
+<ng-container d-flex justify-content-center >
+  <br />
+  <div class="container" style="text-align: center;">
+    <div class="row">
+      <div class="col-xs-12 col-sm-9">
+        <!-- User profile -->
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h2 class="panel-title">{{userRole}} profile</h2>
+          </div>
+          <br />
+          <div class="panel-body">
+            <div class="profile__avatar">
+              <img
+                src="https://bootdey.com/img/Content/avatar/avatar5.png"
+                alt="..."
+              />
+            </div>
+            <div class="profile__header">
+              <!-- name and role -->
+              <h4>{{userInfo.full_Name}} <!-- {{item.Full_Name}} --> <small>{{userRole}}</small></h4>
+              <p>
+                <a href="#">{{userInfo.email}}</a>   <!-- {{item.Email}} -->
+              </p>
+            </div>
+          </div>
+        </div>
+        <hr />
+
+        <!-- User info -->
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">User info</h4>  
+          
+          </div>
+          <div class="panel-body">
+            <table class="table profile__table">
+              <tbody>
+                <tr>
+                  <th><strong>Full Name</strong></th>
+                  <td>{{userInfo.full_Name}} </td>
+                  <!-- {{item.Full_Name}} -->
+                </tr>
+                <tr>
+                  <th><strong>Address</strong></th>
+                  <td>{{userInfo.adrress}}</td>
+                  <!-- {{item.Adrress}} -->
+                </tr>
+                <tr>
+                  <th><strong>Social Security Number</strong></th>
+                  <td>{{userInfo.phone}}</td>  
+              
+                 
+                  <!-- {{item.SSN}} -->
+                </tr>
+                <tr>
+                  <th><strong>Date of Birth</strong></th>
+                  <td>{{userInfo.date_Of_Birth}}</td>
+                  <!-- {{item.Date_Of_Birth}} -->
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">Contact Info</h4>
+          </div>
+          <div class="panel-body">
+            <table class="table profile__table">
+              <tbody>
+                <tr>
+                  <th><strong>Email</strong></th>
+                  <td>{{userInfo.email}}</td>
+                  <!-- {{item.Email}} -->
+                </tr>
+                <tr>
+                  <th><strong>Phone</strong></th>
+                  <td>{{userInfo.phone}}</td>
+                  <!-- {{item.Phone}} -->
+                </tr>
+              </tbody>
+            </table>
+            <br />
+            <button type="button" (click)="editprofile(userInfo)" class="btn btn-primary">
+              Edit your Profile
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br />
+
+  <!-- ------------------------------Popup-------------------------------------------------------------- -->
+  <!-- form ------------------------------------------------------------------------------------------- -->
+
+  <link
+    href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    rel="stylesheet"
+    id="bootstrap-css"
+  />
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!------ Include the above in your HEAD tag ---------->
+
+</ng-container>
+
